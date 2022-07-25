@@ -41,6 +41,8 @@ theme:
     - navigation.tracking
     #- navigation.sections
     #- toc.integrate
+    - content.tooltips
+
   favicon: img/heal_logo.png
 extra_css:
   - stylesheets/extra.css
@@ -51,6 +53,15 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.snippets:
+      auto_append:
+        - includes/glossary.md
+  - pymdownx.superfences
+  - pymdownx.details
+  # - pymdownx.snippets
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
       permalink: True
       baselevel: 1
